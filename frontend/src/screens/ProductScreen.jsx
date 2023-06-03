@@ -20,6 +20,7 @@ import Message from "../components/Message";
 import { addToCart } from "../slices/cartSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { toast } from "react-toastify";
+import Meta from "../components/Meta";
 
 const ProductScreen = () => {
   const [qty, setQty] = useState(1);
@@ -80,6 +81,7 @@ const ProductScreen = () => {
             Go Back
           </Link>
           <>
+            <Meta title={product.name} />
             <Row>
               <Col md={5}>
                 <Image src={product.image} alt={product.name} fluid />
